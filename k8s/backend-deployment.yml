@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devartisan-backend
+  labels:
+    app: devartisan-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devartisan-backend
+  template:
+    metadata:
+      labels:
+        app: devartisan-backend
+    spec:
+      containers:
+      - name: devartisan-backend
+        image: ${{ secrets.DOCKER_USERNAME }}/devartisan-backend:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: database-url
+              key: DATABASE_URL
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devartisan-backend
+spec:
+  selector:
+    app: devartisan-backend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: LoadBalancer

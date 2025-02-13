@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pytest
+requests
+sqlalchemy
+alembic
+psycopg2-binary
+pydantic
+httpx
+langchain
