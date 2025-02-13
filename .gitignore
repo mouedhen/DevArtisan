@@ -112,41 +112,4 @@ docker-compose.override.yml
 
 # IDEs
 .idea/
-*.sublime-project
-*.sublime-workspace
-*.tmproj
-.vscode/
-*.code-workspace
-
-# Ansible
-*.retry
-.cache/
-
-# Local virtualenv
-.local/
-
-# Node.js
-node_modules/
-
-# FastAPI
-*.sqlite3
-
-# Others
-*.swp
-*.swo
-*.swn
-*.bak
-*.tmp
-*.log
-*.pid
-*.seed
-*.pid.lock
-*.coverage
-.coverage.*
-.cache
-.pytest_cache/
-htmlcov/
-.tox/
-.nox/
-.cache/
-pytestdebug.log
+*. ▋

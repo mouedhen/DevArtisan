@@ -1,6 +1,6 @@
 # DevArtisan
 
-DevArtisan is an AI-powered platform that assists developers in generating project plans, designs, and code. It integrates with Figma for design generation and provides a complete CI/CD pipeline for seamless deployment.
+DevArtisan is an AI-powered platform that assists developers in generating project plans, designs, and code. It integrates with Figma for design generation and provides a complete CI/CD pipeline for automated testing, building, and deployment.
 
 ## Features
 
@@ -35,6 +35,18 @@ DevArtisan is an AI-powered platform that assists developers in generating proje
 ### Installation
 
 1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/mouedhen/devartisan.git
-   cd devartisan
+    ```bash
+    git clone https://github.com/mouedhen/devartisan.git
+    cd devartisan
+    ```
+
+2. **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Running the Application
+
+To run the application:
+```bash
+uvicorn backend.app.main:app --reload
